@@ -15,3 +15,11 @@ def load_data(nrows):
   data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
   return data 
 
+# create a text element and let user know that data is loading 
+data_load_state = st.text('Loading data...... ')
+# Load 10,000 rows of data into the data frame 
+data = load_data(10000)
+# Notify the reader that the data was succesfully loaded
+data_load_state = st.text('Loading data......Done! ')
+
+
